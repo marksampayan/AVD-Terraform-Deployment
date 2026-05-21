@@ -1,6 +1,6 @@
 # AVD Deployment
 
-Terraform deployment for Azure Virtual Desktop using the [avd-terraform-modules](https://github.com/marksampayan/avd-terraform-modules) shared module.
+Terraform deployment for Azure Virtual Desktop using the [AVD-Terraform-Modules](https://github.com/marksampayan/AVD-Terraform-Modules) shared module.
 
 ---
 
@@ -18,11 +18,11 @@ cd <your-repo>
 
 ### 2. Pin the module version
 
-In `main.tf`, update the `?ref=` tag to the latest release from [avd-terraform-modules releases](https://github.com/marksampayan/avd-terraform-modules/releases):
+In `main.tf`, update the `?ref=` tag to the latest release from [AVD-Terraform-Modules releases](https://github.com/marksampayan/AVD-Terraform-Modules/releases):
 
 ```hcl
 module "avd" {
-  source = "github.com/marksampayan/avd-terraform-modules//modules/avd-core?ref=v1.0.0"
+  source = "github.com/marksampayan/AVD-Terraform-Modules//modules/avd-core?ref=v1.0.0"
   ...
 }
 ```
@@ -101,10 +101,10 @@ Push to main (or merge a PR). GitHub Actions handles plan → approval → apply
 
 To adopt a new module release:
 
-1. Check [avd-terraform-modules releases](https://github.com/marksampayan/avd-terraform-modules/releases) for what changed
+1. Check [AVD-Terraform-Modules releases](https://github.com/marksampayan/AVD-Terraform-Modules/releases) for what changed
 2. Update `?ref=` in `main.tf`:
    ```hcl
-   source = "github.com/marksampayan/avd-terraform-modules//modules/avd-core?ref=v1.1.0"
+   source = "github.com/marksampayan/AVD-Terraform-Modules//modules/avd-core?ref=v1.1.0"
    ```
 3. Open a PR — the plan will show any infrastructure changes the new version introduces
 4. Review the plan, approve, and merge
